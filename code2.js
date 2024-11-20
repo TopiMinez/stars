@@ -76,7 +76,7 @@ gdjs.copyArray(runtimeScene.getObjects("IDtext"), gdjs.ShopCode.GDIDtextObjects1
     gdjs.ShopCode.GDBalanceObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtTools.common.roundTo(runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), 5)));
 }
 }{for(var i = 0, len = gdjs.ShopCode.GDIDtextObjects1.length ;i < len;++i) {
-    gdjs.ShopCode.GDIDtextObjects1[i].getBehavior("Text").setText("ID игрока: " + runtimeScene.getGame().getVariables().getFromIndex(1).getAsString());
+    gdjs.ShopCode.GDIDtextObjects1[i].getBehavior("Text").setText("UID " + runtimeScene.getGame().getVariables().getFromIndex(1).getAsString());
 }
 }}
 
