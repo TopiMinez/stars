@@ -67,7 +67,7 @@ gdjs.MainCode.GDStarsEmitterObjects1.length = 0;
 
 {gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDStarsEmitterObjects1Objects, gdjs.evtTools.input.getCursorX(runtimeScene, "", 0), gdjs.evtTools.input.getCursorY(runtimeScene, "", 0), "");
 }{runtimeScene.getGame().getVariables().getFromIndex(0).add(0.00001);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Star", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Starss", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }}
 
 }
@@ -102,7 +102,7 @@ if (isConditionTrue_0) {
 }{gdjs.evtTools.storage.writeNumberInJSONFile("a", "rwm", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
 }{runtimeScene.getGame().getVariables().getFromIndex(0).add(1);
 }{gdjs.evtTools.camera.showLayer(runtimeScene, "Reward");
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Star", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Starss", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }}
 
 }
