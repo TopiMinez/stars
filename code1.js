@@ -27,6 +27,9 @@ gdjs.MainCode.GDPurpleButtonWithShadow2Objects3= [];
 gdjs.MainCode.GDAntiClickerObjects1= [];
 gdjs.MainCode.GDAntiClickerObjects2= [];
 gdjs.MainCode.GDAntiClickerObjects3= [];
+gdjs.MainCode.GDPurpleButtonWithShadow3Objects1= [];
+gdjs.MainCode.GDPurpleButtonWithShadow3Objects2= [];
+gdjs.MainCode.GDPurpleButtonWithShadow3Objects3= [];
 
 
 gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDStarObjects2Objects = Hashtable.newFrom({"Star": gdjs.MainCode.GDStarObjects2});
@@ -86,8 +89,8 @@ gdjs.MainCode.GDStarsEmitterObjects2.length = 0;
 
 {gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDStarsEmitterObjects2Objects, gdjs.evtTools.input.getCursorX(runtimeScene, "", 0), gdjs.evtTools.input.getCursorY(runtimeScene, "", 0), "");
 }{runtimeScene.getGame().getVariables().getFromIndex(0).add(0.00001);
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Starss", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }{runtimeScene.getScene().getVariables().getFromIndex(2).add(1);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }}
 
 }
@@ -146,7 +149,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "anti") >= 1;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(2)) <= 16;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(2)) <= 15;
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "anti");
@@ -164,13 +167,13 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "anti") >= 1;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(2)) >= 17;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(2)) >= 21;
 }
 if (isConditionTrue_0) {
 {runtimeScene.getScene().getVariables().getFromIndex(1).add(1);
 }{runtimeScene.getScene().getVariables().getFromIndex(2).setNumber(0);
 }{gdjs.evtTools.camera.showLayer(runtimeScene, "Anti");
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "warn", runtimeScene.getScene().getVariables().getFromIndex(1).getAsNumber());
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "war", runtimeScene.getScene().getVariables().getFromIndex(1).getAsNumber());
 }{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "anti");
 }}
 
@@ -292,6 +295,9 @@ gdjs.MainCode.GDPurpleButtonWithShadow2Objects3.length = 0;
 gdjs.MainCode.GDAntiClickerObjects1.length = 0;
 gdjs.MainCode.GDAntiClickerObjects2.length = 0;
 gdjs.MainCode.GDAntiClickerObjects3.length = 0;
+gdjs.MainCode.GDPurpleButtonWithShadow3Objects1.length = 0;
+gdjs.MainCode.GDPurpleButtonWithShadow3Objects2.length = 0;
+gdjs.MainCode.GDPurpleButtonWithShadow3Objects3.length = 0;
 
 gdjs.MainCode.eventsList2(runtimeScene);
 gdjs.MainCode.GDStarObjects1.length = 0;
@@ -321,6 +327,9 @@ gdjs.MainCode.GDPurpleButtonWithShadow2Objects3.length = 0;
 gdjs.MainCode.GDAntiClickerObjects1.length = 0;
 gdjs.MainCode.GDAntiClickerObjects2.length = 0;
 gdjs.MainCode.GDAntiClickerObjects3.length = 0;
+gdjs.MainCode.GDPurpleButtonWithShadow3Objects1.length = 0;
+gdjs.MainCode.GDPurpleButtonWithShadow3Objects2.length = 0;
+gdjs.MainCode.GDPurpleButtonWithShadow3Objects3.length = 0;
 
 
 return;

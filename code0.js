@@ -2,7 +2,7 @@ gdjs.LoadCode = {};
 gdjs.LoadCode.localVariables = [];
 
 
-gdjs.LoadCode.asyncCallback13574780 = function (runtimeScene, asyncObjectsList) {
+gdjs.LoadCode.asyncCallback189482156 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.LoadCode.localVariables);
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Main", false);
 }{gdjs.evtsExt__GamePushAds__ShowFullscreen.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
@@ -17,7 +17,7 @@ gdjs.LoadCode.eventsList0 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.LoadCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(2), (runtimeScene) => (gdjs.LoadCode.asyncCallback13574780(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(2), (runtimeScene) => (gdjs.LoadCode.asyncCallback189482156(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -38,7 +38,7 @@ if (isConditionTrue_0) {
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "id", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(1));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "Stars", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "rw", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(2));
-}{gdjs.evtTools.storage.readNumberFromJSONFile("a", "warn", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(3));
+}{gdjs.evtTools.storage.readNumberFromJSONFile("a", "war", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(3));
 }
 { //Subevents
 gdjs.LoadCode.eventsList0(runtimeScene);} //End of subevents
