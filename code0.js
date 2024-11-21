@@ -36,7 +36,7 @@ if (isConditionTrue_0) {
 {gdjs.evtsExt__GamePushAds__Initialization.func(runtimeScene, "17515", "AMI2KwNIiSv1kxFPMdl3N23bh2b1Yqt5", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "ids", runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "id", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(1));
-}{gdjs.evtTools.storage.readNumberFromJSONFile("a", "Stars", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0));
+}{gdjs.evtTools.storage.readNumberFromJSONFile("a", "Star", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "rw", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(2));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "war", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(3));
 }

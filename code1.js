@@ -30,6 +30,9 @@ gdjs.MainCode.GDAntiClickerObjects3= [];
 gdjs.MainCode.GDPurpleButtonWithShadow3Objects1= [];
 gdjs.MainCode.GDPurpleButtonWithShadow3Objects2= [];
 gdjs.MainCode.GDPurpleButtonWithShadow3Objects3= [];
+gdjs.MainCode.GDBlueFlatBarObjects1= [];
+gdjs.MainCode.GDBlueFlatBarObjects2= [];
+gdjs.MainCode.GDBlueFlatBarObjects3= [];
 
 
 gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDStarObjects2Objects = Hashtable.newFrom({"Star": gdjs.MainCode.GDStarObjects2});
@@ -89,7 +92,7 @@ gdjs.MainCode.GDStarsEmitterObjects2.length = 0;
 
 {gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDStarsEmitterObjects2Objects, gdjs.evtTools.input.getCursorX(runtimeScene, "", 0), gdjs.evtTools.input.getCursorY(runtimeScene, "", 0), "");
 }{runtimeScene.getGame().getVariables().getFromIndex(0).add(0.00001);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Starss", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Star", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }{runtimeScene.getScene().getVariables().getFromIndex(2).add(1);
 }}
 
@@ -127,12 +130,16 @@ if (isConditionTrue_0) {
 let isConditionTrue_0 = false;
 {
 gdjs.copyArray(runtimeScene.getObjects("AntiClicker"), gdjs.MainCode.GDAntiClickerObjects1);
+gdjs.copyArray(runtimeScene.getObjects("BlueFlatBar"), gdjs.MainCode.GDBlueFlatBarObjects1);
 gdjs.copyArray(runtimeScene.getObjects("NewText"), gdjs.MainCode.GDNewTextObjects1);
 {for(var i = 0, len = gdjs.MainCode.GDNewTextObjects1.length ;i < len;++i) {
     gdjs.MainCode.GDNewTextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtTools.common.roundTo(runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), 5)));
 }
 }{for(var i = 0, len = gdjs.MainCode.GDAntiClickerObjects1.length ;i < len;++i) {
     gdjs.MainCode.GDAntiClickerObjects1[i].getBehavior("Text").setText("Авто-кликер запрещен. (" + runtimeScene.getScene().getVariables().getFromIndex(1).getAsString() + "/3)");
+}
+}{for(var i = 0, len = gdjs.MainCode.GDBlueFlatBarObjects1.length ;i < len;++i) {
+    gdjs.MainCode.GDBlueFlatBarObjects1[i].SetValue(runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }
 }}
 
@@ -244,7 +251,7 @@ if (isConditionTrue_0) {
 }{gdjs.evtTools.storage.writeNumberInJSONFile("a", "rw", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
 }{runtimeScene.getGame().getVariables().getFromIndex(0).add(1);
 }{gdjs.evtTools.camera.showLayer(runtimeScene, "Reward");
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Star", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }}
 
 }
@@ -298,6 +305,9 @@ gdjs.MainCode.GDAntiClickerObjects3.length = 0;
 gdjs.MainCode.GDPurpleButtonWithShadow3Objects1.length = 0;
 gdjs.MainCode.GDPurpleButtonWithShadow3Objects2.length = 0;
 gdjs.MainCode.GDPurpleButtonWithShadow3Objects3.length = 0;
+gdjs.MainCode.GDBlueFlatBarObjects1.length = 0;
+gdjs.MainCode.GDBlueFlatBarObjects2.length = 0;
+gdjs.MainCode.GDBlueFlatBarObjects3.length = 0;
 
 gdjs.MainCode.eventsList2(runtimeScene);
 gdjs.MainCode.GDStarObjects1.length = 0;
@@ -330,6 +340,9 @@ gdjs.MainCode.GDAntiClickerObjects3.length = 0;
 gdjs.MainCode.GDPurpleButtonWithShadow3Objects1.length = 0;
 gdjs.MainCode.GDPurpleButtonWithShadow3Objects2.length = 0;
 gdjs.MainCode.GDPurpleButtonWithShadow3Objects3.length = 0;
+gdjs.MainCode.GDBlueFlatBarObjects1.length = 0;
+gdjs.MainCode.GDBlueFlatBarObjects2.length = 0;
+gdjs.MainCode.GDBlueFlatBarObjects3.length = 0;
 
 
 return;
