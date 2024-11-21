@@ -6,9 +6,6 @@ gdjs.MainCode.GDStarObjects3= [];
 gdjs.MainCode.GDNewTextObjects1= [];
 gdjs.MainCode.GDNewTextObjects2= [];
 gdjs.MainCode.GDNewTextObjects3= [];
-gdjs.MainCode.GDPurpleButtonWithShadowObjects1= [];
-gdjs.MainCode.GDPurpleButtonWithShadowObjects2= [];
-gdjs.MainCode.GDPurpleButtonWithShadowObjects3= [];
 gdjs.MainCode.GDStarsEmitterObjects1= [];
 gdjs.MainCode.GDStarsEmitterObjects2= [];
 gdjs.MainCode.GDStarsEmitterObjects3= [];
@@ -21,9 +18,6 @@ gdjs.MainCode.GDRewardTextObjects3= [];
 gdjs.MainCode.GDRewardText2Objects1= [];
 gdjs.MainCode.GDRewardText2Objects2= [];
 gdjs.MainCode.GDRewardText2Objects3= [];
-gdjs.MainCode.GDPurpleButtonWithShadow2Objects1= [];
-gdjs.MainCode.GDPurpleButtonWithShadow2Objects2= [];
-gdjs.MainCode.GDPurpleButtonWithShadow2Objects3= [];
 gdjs.MainCode.GDAntiClickerObjects1= [];
 gdjs.MainCode.GDAntiClickerObjects2= [];
 gdjs.MainCode.GDAntiClickerObjects3= [];
@@ -36,6 +30,9 @@ gdjs.MainCode.GDBlueFlatBarObjects3= [];
 gdjs.MainCode.GDNewTextInputObjects1= [];
 gdjs.MainCode.GDNewTextInputObjects2= [];
 gdjs.MainCode.GDNewTextInputObjects3= [];
+gdjs.MainCode.GDShopButtonObjects1= [];
+gdjs.MainCode.GDShopButtonObjects2= [];
+gdjs.MainCode.GDShopButtonObjects3= [];
 
 
 gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDStarObjects2Objects = Hashtable.newFrom({"Star": gdjs.MainCode.GDStarObjects2});
@@ -44,18 +41,18 @@ gdjs.MainCode.eventsList0 = function(runtimeScene) {
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("PurpleButtonWithShadow"), gdjs.MainCode.GDPurpleButtonWithShadowObjects2);
+gdjs.copyArray(runtimeScene.getObjects("ShopButton"), gdjs.MainCode.GDShopButtonObjects2);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.MainCode.GDPurpleButtonWithShadowObjects2.length;i<l;++i) {
-    if ( gdjs.MainCode.GDPurpleButtonWithShadowObjects2[i].IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+for (var i = 0, k = 0, l = gdjs.MainCode.GDShopButtonObjects2.length;i<l;++i) {
+    if ( gdjs.MainCode.GDShopButtonObjects2[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
         isConditionTrue_0 = true;
-        gdjs.MainCode.GDPurpleButtonWithShadowObjects2[k] = gdjs.MainCode.GDPurpleButtonWithShadowObjects2[i];
+        gdjs.MainCode.GDShopButtonObjects2[k] = gdjs.MainCode.GDShopButtonObjects2[i];
         ++k;
     }
 }
-gdjs.MainCode.GDPurpleButtonWithShadowObjects2.length = k;
+gdjs.MainCode.GDShopButtonObjects2.length = k;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Reward"));
@@ -104,21 +101,13 @@ gdjs.MainCode.GDStarsEmitterObjects2.length = 0;
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("PurpleButtonWithShadow2"), gdjs.MainCode.GDPurpleButtonWithShadow2Objects2);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.MainCode.GDPurpleButtonWithShadow2Objects2.length;i<l;++i) {
-    if ( gdjs.MainCode.GDPurpleButtonWithShadow2Objects2[i].IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.MainCode.GDPurpleButtonWithShadow2Objects2[k] = gdjs.MainCode.GDPurpleButtonWithShadow2Objects2[i];
-        ++k;
-    }
-}
-gdjs.MainCode.GDPurpleButtonWithShadow2Objects2.length = k;
+isConditionTrue_0 = gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Reward");
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
-isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Anti"));
+isConditionTrue_0 = gdjs.evtTools.input.hasAnyTouchOrMouseStarted(runtimeScene);
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.camera.hideLayer(runtimeScene, "Reward");
@@ -209,14 +198,14 @@ gdjs.MainCode.eventsList1(runtimeScene);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1)) == 84701847;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1)) == 9;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) == 0;
 }
 if (isConditionTrue_0) {
 {runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(1);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "w", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "REWARD", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
 }{runtimeScene.getGame().getVariables().getFromIndex(0).add(1);
 }{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }{gdjs.evtTools.camera.showLayer(runtimeScene, "Reward");
@@ -238,50 +227,6 @@ if (isConditionTrue_0) {
 }
 
 
-{
-
-gdjs.copyArray(runtimeScene.getObjects("NewTextInput"), gdjs.MainCode.GDNewTextInputObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.MainCode.GDNewTextInputObjects1.length;i<l;++i) {
-    if ( gdjs.MainCode.GDNewTextInputObjects1[i].getBehavior("Text").getText() == "aud9231542mtgf34" ) {
-        isConditionTrue_0 = true;
-        gdjs.MainCode.GDNewTextInputObjects1[k] = gdjs.MainCode.GDNewTextInputObjects1[i];
-        ++k;
-    }
-}
-gdjs.MainCode.GDNewTextInputObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(3)) == 0;
-}
-if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().getFromIndex(3).setNumber(1);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "pr1", 1);
-}{runtimeScene.getGame().getVariables().getFromIndex(0).add(5);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
-}}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(3)) == 1;
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("NewTextInput"), gdjs.MainCode.GDNewTextInputObjects1);
-{for(var i = 0, len = gdjs.MainCode.GDNewTextInputObjects1.length ;i < len;++i) {
-    gdjs.MainCode.GDNewTextInputObjects1[i].deleteFromScene(runtimeScene);
-}
-}}
-
-}
-
-
 };
 
 gdjs.MainCode.func = function(runtimeScene) {
@@ -293,9 +238,6 @@ gdjs.MainCode.GDStarObjects3.length = 0;
 gdjs.MainCode.GDNewTextObjects1.length = 0;
 gdjs.MainCode.GDNewTextObjects2.length = 0;
 gdjs.MainCode.GDNewTextObjects3.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadowObjects1.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadowObjects2.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadowObjects3.length = 0;
 gdjs.MainCode.GDStarsEmitterObjects1.length = 0;
 gdjs.MainCode.GDStarsEmitterObjects2.length = 0;
 gdjs.MainCode.GDStarsEmitterObjects3.length = 0;
@@ -308,9 +250,6 @@ gdjs.MainCode.GDRewardTextObjects3.length = 0;
 gdjs.MainCode.GDRewardText2Objects1.length = 0;
 gdjs.MainCode.GDRewardText2Objects2.length = 0;
 gdjs.MainCode.GDRewardText2Objects3.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadow2Objects1.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadow2Objects2.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadow2Objects3.length = 0;
 gdjs.MainCode.GDAntiClickerObjects1.length = 0;
 gdjs.MainCode.GDAntiClickerObjects2.length = 0;
 gdjs.MainCode.GDAntiClickerObjects3.length = 0;
@@ -323,6 +262,9 @@ gdjs.MainCode.GDBlueFlatBarObjects3.length = 0;
 gdjs.MainCode.GDNewTextInputObjects1.length = 0;
 gdjs.MainCode.GDNewTextInputObjects2.length = 0;
 gdjs.MainCode.GDNewTextInputObjects3.length = 0;
+gdjs.MainCode.GDShopButtonObjects1.length = 0;
+gdjs.MainCode.GDShopButtonObjects2.length = 0;
+gdjs.MainCode.GDShopButtonObjects3.length = 0;
 
 gdjs.MainCode.eventsList2(runtimeScene);
 gdjs.MainCode.GDStarObjects1.length = 0;
@@ -331,9 +273,6 @@ gdjs.MainCode.GDStarObjects3.length = 0;
 gdjs.MainCode.GDNewTextObjects1.length = 0;
 gdjs.MainCode.GDNewTextObjects2.length = 0;
 gdjs.MainCode.GDNewTextObjects3.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadowObjects1.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadowObjects2.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadowObjects3.length = 0;
 gdjs.MainCode.GDStarsEmitterObjects1.length = 0;
 gdjs.MainCode.GDStarsEmitterObjects2.length = 0;
 gdjs.MainCode.GDStarsEmitterObjects3.length = 0;
@@ -346,9 +285,6 @@ gdjs.MainCode.GDRewardTextObjects3.length = 0;
 gdjs.MainCode.GDRewardText2Objects1.length = 0;
 gdjs.MainCode.GDRewardText2Objects2.length = 0;
 gdjs.MainCode.GDRewardText2Objects3.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadow2Objects1.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadow2Objects2.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadow2Objects3.length = 0;
 gdjs.MainCode.GDAntiClickerObjects1.length = 0;
 gdjs.MainCode.GDAntiClickerObjects2.length = 0;
 gdjs.MainCode.GDAntiClickerObjects3.length = 0;
@@ -361,6 +297,9 @@ gdjs.MainCode.GDBlueFlatBarObjects3.length = 0;
 gdjs.MainCode.GDNewTextInputObjects1.length = 0;
 gdjs.MainCode.GDNewTextInputObjects2.length = 0;
 gdjs.MainCode.GDNewTextInputObjects3.length = 0;
+gdjs.MainCode.GDShopButtonObjects1.length = 0;
+gdjs.MainCode.GDShopButtonObjects2.length = 0;
+gdjs.MainCode.GDShopButtonObjects3.length = 0;
 
 
 return;

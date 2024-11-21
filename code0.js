@@ -37,8 +37,8 @@ if (isConditionTrue_0) {
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "ids", runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "id", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(1));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "Stars", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0));
-}{gdjs.evtTools.storage.readNumberFromJSONFile("a", "w", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(2));
-}{gdjs.evtTools.storage.readNumberFromJSONFile("a", "pr1", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(3));
+}{gdjs.evtTools.storage.readNumberFromJSONFile("a", "REWARD", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(2));
+}{gdjs.evtTools.storage.readNumberFromJSONFile("a", "PROMOCODE", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(3));
 }
 { //Subevents
 gdjs.LoadCode.eventsList0(runtimeScene);} //End of subevents
