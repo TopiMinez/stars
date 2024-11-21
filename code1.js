@@ -92,7 +92,7 @@ gdjs.MainCode.GDStarsEmitterObjects2.length = 0;
 
 {gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDStarsEmitterObjects2Objects, gdjs.evtTools.input.getCursorX(runtimeScene, "", 0), gdjs.evtTools.input.getCursorY(runtimeScene, "", 0), "");
 }{runtimeScene.getGame().getVariables().getFromIndex(0).add(0.00001);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Star", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }{runtimeScene.getScene().getVariables().getFromIndex(2).add(1);
 }}
 
@@ -203,23 +203,6 @@ if (isConditionTrue_0) {
 }
 
 
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(1)) >= 4;
-if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("AntiClicker"), gdjs.MainCode.GDAntiClickerObjects1);
-{gdjs.evtTools.camera.showLayer(runtimeScene, "Anti");
-}{for(var i = 0, len = gdjs.MainCode.GDAntiClickerObjects1.length ;i < len;++i) {
-    gdjs.MainCode.GDAntiClickerObjects1[i].getBehavior("Text").setText("Вы были забанены за авто-кликер.");
-}
-}}
-
-}
-
-
 };gdjs.MainCode.eventsList2 = function(runtimeScene) {
 
 {
@@ -251,7 +234,7 @@ if (isConditionTrue_0) {
 }{gdjs.evtTools.storage.writeNumberInJSONFile("a", "rw", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
 }{runtimeScene.getGame().getVariables().getFromIndex(0).add(1);
 }{gdjs.evtTools.camera.showLayer(runtimeScene, "Reward");
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Star", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }}
 
 }
