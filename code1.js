@@ -201,6 +201,24 @@ gdjs.MainCode.eventsList1(runtimeScene);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1)) == 41982470;
+if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("AntiClicker"), gdjs.MainCode.GDAntiClickerObjects1);
+{runtimeScene.getGame().getVariables().getFromIndex(0).sub(1000);
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
+}{for(var i = 0, len = gdjs.MainCode.GDAntiClickerObjects1.length ;i < len;++i) {
+    gdjs.MainCode.GDAntiClickerObjects1[i].getBehavior("Text").setText("Вы были забанены.");
+}
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1)) == 11642313;
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
