@@ -21,21 +21,24 @@ gdjs.MainCode.GDRewardText2Objects3= [];
 gdjs.MainCode.GDAntiClickerObjects1= [];
 gdjs.MainCode.GDAntiClickerObjects2= [];
 gdjs.MainCode.GDAntiClickerObjects3= [];
-gdjs.MainCode.GDPurpleButtonWithShadow3Objects1= [];
-gdjs.MainCode.GDPurpleButtonWithShadow3Objects2= [];
-gdjs.MainCode.GDPurpleButtonWithShadow3Objects3= [];
 gdjs.MainCode.GDBlueFlatBarObjects1= [];
 gdjs.MainCode.GDBlueFlatBarObjects2= [];
 gdjs.MainCode.GDBlueFlatBarObjects3= [];
-gdjs.MainCode.GDNewTextInputObjects1= [];
-gdjs.MainCode.GDNewTextInputObjects2= [];
-gdjs.MainCode.GDNewTextInputObjects3= [];
 gdjs.MainCode.GDShopButtonObjects1= [];
 gdjs.MainCode.GDShopButtonObjects2= [];
 gdjs.MainCode.GDShopButtonObjects3= [];
 gdjs.MainCode.GDGameButtonObjects1= [];
 gdjs.MainCode.GDGameButtonObjects2= [];
 gdjs.MainCode.GDGameButtonObjects3= [];
+gdjs.MainCode.GDSettingsButtonObjects1= [];
+gdjs.MainCode.GDSettingsButtonObjects2= [];
+gdjs.MainCode.GDSettingsButtonObjects3= [];
+gdjs.MainCode.GDIDtextObjects1= [];
+gdjs.MainCode.GDIDtextObjects2= [];
+gdjs.MainCode.GDIDtextObjects3= [];
+gdjs.MainCode.GDNewVideoObjects1= [];
+gdjs.MainCode.GDNewVideoObjects2= [];
+gdjs.MainCode.GDNewVideoObjects3= [];
 
 
 gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDStarObjects2Objects = Hashtable.newFrom({"Star": gdjs.MainCode.GDStarObjects2});
@@ -203,12 +206,14 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1)) == 41982470;
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("AntiClicker"), gdjs.MainCode.GDAntiClickerObjects1);
-{runtimeScene.getGame().getVariables().getFromIndex(0).sub(1000);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
-}{for(var i = 0, len = gdjs.MainCode.GDAntiClickerObjects1.length ;i < len;++i) {
-    gdjs.MainCode.GDAntiClickerObjects1[i].getBehavior("Text").setText("Вы были забанены.");
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) == 0;
 }
+if (isConditionTrue_0) {
+{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(1);
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "REWA12", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
+}{runtimeScene.getGame().getVariables().getFromIndex(0).setNumber(0);
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }}
 
 }
@@ -304,45 +309,14 @@ if (isConditionTrue_0) {
 {
 
 
-
-}
-
-
-{
-
-
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
+gdjs.copyArray(runtimeScene.getObjects("NewVideo"), gdjs.MainCode.GDNewVideoObjects1);
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "anti");
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("GameButton"), gdjs.MainCode.GDGameButtonObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.MainCode.GDGameButtonObjects1.length;i<l;++i) {
-    if ( gdjs.MainCode.GDGameButtonObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.MainCode.GDGameButtonObjects1[k] = gdjs.MainCode.GDGameButtonObjects1[i];
-        ++k;
-    }
-}
-gdjs.MainCode.GDGameButtonObjects1.length = k;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(4)) >= 3;
-}
-if (isConditionTrue_0) {
-/* Reuse gdjs.MainCode.GDGameButtonObjects1 */
-{for(var i = 0, len = gdjs.MainCode.GDGameButtonObjects1.length ;i < len;++i) {
-    gdjs.MainCode.GDGameButtonObjects1[i].hide();
+}{for(var i = 0, len = gdjs.MainCode.GDNewVideoObjects1.length ;i < len;++i) {
+    gdjs.MainCode.GDNewVideoObjects1[i].play();
 }
 }}
 
@@ -351,24 +325,23 @@ if (isConditionTrue_0) {
 
 {
 
-gdjs.copyArray(runtimeScene.getObjects("GameButton"), gdjs.MainCode.GDGameButtonObjects1);
+gdjs.copyArray(runtimeScene.getObjects("SettingsButton"), gdjs.MainCode.GDSettingsButtonObjects1);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.MainCode.GDGameButtonObjects1.length;i<l;++i) {
-    if ( gdjs.MainCode.GDGameButtonObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+for (var i = 0, k = 0, l = gdjs.MainCode.GDSettingsButtonObjects1.length;i<l;++i) {
+    if ( gdjs.MainCode.GDSettingsButtonObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
         isConditionTrue_0 = true;
-        gdjs.MainCode.GDGameButtonObjects1[k] = gdjs.MainCode.GDGameButtonObjects1[i];
+        gdjs.MainCode.GDSettingsButtonObjects1[k] = gdjs.MainCode.GDSettingsButtonObjects1[i];
         ++k;
     }
 }
-gdjs.MainCode.GDGameButtonObjects1.length = k;
+gdjs.MainCode.GDSettingsButtonObjects1.length = k;
 if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(4)) <= 2;
+/* Reuse gdjs.MainCode.GDSettingsButtonObjects1 */
+{for(var i = 0, len = gdjs.MainCode.GDSettingsButtonObjects1.length ;i < len;++i) {
+    gdjs.MainCode.GDSettingsButtonObjects1[i].deleteFromScene(runtimeScene);
 }
-if (isConditionTrue_0) {
-{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Settings", false);
 }}
 
 }
@@ -400,21 +373,24 @@ gdjs.MainCode.GDRewardText2Objects3.length = 0;
 gdjs.MainCode.GDAntiClickerObjects1.length = 0;
 gdjs.MainCode.GDAntiClickerObjects2.length = 0;
 gdjs.MainCode.GDAntiClickerObjects3.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadow3Objects1.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadow3Objects2.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadow3Objects3.length = 0;
 gdjs.MainCode.GDBlueFlatBarObjects1.length = 0;
 gdjs.MainCode.GDBlueFlatBarObjects2.length = 0;
 gdjs.MainCode.GDBlueFlatBarObjects3.length = 0;
-gdjs.MainCode.GDNewTextInputObjects1.length = 0;
-gdjs.MainCode.GDNewTextInputObjects2.length = 0;
-gdjs.MainCode.GDNewTextInputObjects3.length = 0;
 gdjs.MainCode.GDShopButtonObjects1.length = 0;
 gdjs.MainCode.GDShopButtonObjects2.length = 0;
 gdjs.MainCode.GDShopButtonObjects3.length = 0;
 gdjs.MainCode.GDGameButtonObjects1.length = 0;
 gdjs.MainCode.GDGameButtonObjects2.length = 0;
 gdjs.MainCode.GDGameButtonObjects3.length = 0;
+gdjs.MainCode.GDSettingsButtonObjects1.length = 0;
+gdjs.MainCode.GDSettingsButtonObjects2.length = 0;
+gdjs.MainCode.GDSettingsButtonObjects3.length = 0;
+gdjs.MainCode.GDIDtextObjects1.length = 0;
+gdjs.MainCode.GDIDtextObjects2.length = 0;
+gdjs.MainCode.GDIDtextObjects3.length = 0;
+gdjs.MainCode.GDNewVideoObjects1.length = 0;
+gdjs.MainCode.GDNewVideoObjects2.length = 0;
+gdjs.MainCode.GDNewVideoObjects3.length = 0;
 
 gdjs.MainCode.eventsList2(runtimeScene);
 gdjs.MainCode.GDStarObjects1.length = 0;
@@ -438,21 +414,24 @@ gdjs.MainCode.GDRewardText2Objects3.length = 0;
 gdjs.MainCode.GDAntiClickerObjects1.length = 0;
 gdjs.MainCode.GDAntiClickerObjects2.length = 0;
 gdjs.MainCode.GDAntiClickerObjects3.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadow3Objects1.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadow3Objects2.length = 0;
-gdjs.MainCode.GDPurpleButtonWithShadow3Objects3.length = 0;
 gdjs.MainCode.GDBlueFlatBarObjects1.length = 0;
 gdjs.MainCode.GDBlueFlatBarObjects2.length = 0;
 gdjs.MainCode.GDBlueFlatBarObjects3.length = 0;
-gdjs.MainCode.GDNewTextInputObjects1.length = 0;
-gdjs.MainCode.GDNewTextInputObjects2.length = 0;
-gdjs.MainCode.GDNewTextInputObjects3.length = 0;
 gdjs.MainCode.GDShopButtonObjects1.length = 0;
 gdjs.MainCode.GDShopButtonObjects2.length = 0;
 gdjs.MainCode.GDShopButtonObjects3.length = 0;
 gdjs.MainCode.GDGameButtonObjects1.length = 0;
 gdjs.MainCode.GDGameButtonObjects2.length = 0;
 gdjs.MainCode.GDGameButtonObjects3.length = 0;
+gdjs.MainCode.GDSettingsButtonObjects1.length = 0;
+gdjs.MainCode.GDSettingsButtonObjects2.length = 0;
+gdjs.MainCode.GDSettingsButtonObjects3.length = 0;
+gdjs.MainCode.GDIDtextObjects1.length = 0;
+gdjs.MainCode.GDIDtextObjects2.length = 0;
+gdjs.MainCode.GDIDtextObjects3.length = 0;
+gdjs.MainCode.GDNewVideoObjects1.length = 0;
+gdjs.MainCode.GDNewVideoObjects2.length = 0;
+gdjs.MainCode.GDNewVideoObjects3.length = 0;
 
 
 return;
