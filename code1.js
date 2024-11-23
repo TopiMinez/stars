@@ -347,6 +347,20 @@ if (isConditionTrue_0) {
 }
 
 
+{
+
+
+let isConditionTrue_0 = false;
+{
+gdjs.copyArray(runtimeScene.getObjects("IDtext"), gdjs.MainCode.GDIDtextObjects1);
+{for(var i = 0, len = gdjs.MainCode.GDIDtextObjects1.length ;i < len;++i) {
+    gdjs.MainCode.GDIDtextObjects1[i].getBehavior("Text").setText("UID " + runtimeScene.getGame().getVariables().getFromIndex(1).getAsString());
+}
+}}
+
+}
+
+
 };
 
 gdjs.MainCode.func = function(runtimeScene) {
