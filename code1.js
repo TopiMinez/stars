@@ -207,15 +207,50 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) == 0;
 }
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("RewardText2"), gdjs.MainCode.GDRewardText2Objects1);
 {runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(1);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "REWA", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "REWA12", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
 }{runtimeScene.getGame().getVariables().getFromIndex(0).sub(13);
 }{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
-}{gdjs.evtTools.camera.showLayer(runtimeScene, "Reward");
-}{for(var i = 0, len = gdjs.MainCode.GDRewardText2Objects1.length ;i < len;++i) {
-    gdjs.MainCode.GDRewardText2Objects1[i].getBehavior("Text").setText("+3");
+}}
+
 }
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1)) == 95616914;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) == 0;
+}
+if (isConditionTrue_0) {
+{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(1);
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "REWA12", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
+}{runtimeScene.getGame().getVariables().getFromIndex(0).sub(13);
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
+}}
+
+}
+
+
+{
+
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1)) == 69847210;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) == 0;
+}
+if (isConditionTrue_0) {
+{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(1);
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "REWA12", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
+}{runtimeScene.getGame().getVariables().getFromIndex(0).sub(13);
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }}
 
 }

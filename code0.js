@@ -37,7 +37,7 @@ if (isConditionTrue_0) {
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "ids", runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "id", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(1));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "Stars", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0));
-}{gdjs.evtTools.storage.readNumberFromJSONFile("a", "REWA", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(2));
+}{gdjs.evtTools.storage.readNumberFromJSONFile("a", "REWA12", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(2));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "mg", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(4));
 }
 { //Subevents
