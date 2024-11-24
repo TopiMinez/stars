@@ -2,6 +2,8 @@ gdjs.LoadCode = {};
 gdjs.LoadCode.localVariables = [];
 gdjs.LoadCode.GDNewTextObjects1= [];
 gdjs.LoadCode.GDNewTextObjects2= [];
+gdjs.LoadCode.GDBGObjects1= [];
+gdjs.LoadCode.GDBGObjects2= [];
 
 
 gdjs.LoadCode.asyncCallback11472956 = function (runtimeScene, asyncObjectsList) {
@@ -76,10 +78,14 @@ runtimeScene.getOnceTriggers().startNewFrame();
 
 gdjs.LoadCode.GDNewTextObjects1.length = 0;
 gdjs.LoadCode.GDNewTextObjects2.length = 0;
+gdjs.LoadCode.GDBGObjects1.length = 0;
+gdjs.LoadCode.GDBGObjects2.length = 0;
 
 gdjs.LoadCode.eventsList1(runtimeScene);
 gdjs.LoadCode.GDNewTextObjects1.length = 0;
 gdjs.LoadCode.GDNewTextObjects2.length = 0;
+gdjs.LoadCode.GDBGObjects1.length = 0;
+gdjs.LoadCode.GDBGObjects2.length = 0;
 
 
 return;
