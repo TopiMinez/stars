@@ -4,7 +4,7 @@ gdjs.LoadCode.GDNewTextObjects1= [];
 gdjs.LoadCode.GDNewTextObjects2= [];
 
 
-gdjs.LoadCode.asyncCallback11548444 = function (runtimeScene, asyncObjectsList) {
+gdjs.LoadCode.asyncCallback11472956 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.LoadCode.localVariables);
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Main", false);
 }{gdjs.evtsExt__GamePushAds__ShowFullscreen.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
@@ -19,7 +19,7 @@ gdjs.LoadCode.eventsList0 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.LoadCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(2), (runtimeScene) => (gdjs.LoadCode.asyncCallback11548444(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(2), (runtimeScene) => (gdjs.LoadCode.asyncCallback11472956(runtimeScene, asyncObjectsList)));
 }
 }
 

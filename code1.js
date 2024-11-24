@@ -36,9 +36,9 @@ gdjs.MainCode.GDSettingsButtonObjects3= [];
 gdjs.MainCode.GDIDtextObjects1= [];
 gdjs.MainCode.GDIDtextObjects2= [];
 gdjs.MainCode.GDIDtextObjects3= [];
-gdjs.MainCode.GDNewVideoObjects1= [];
-gdjs.MainCode.GDNewVideoObjects2= [];
-gdjs.MainCode.GDNewVideoObjects3= [];
+gdjs.MainCode.GDBGObjects1= [];
+gdjs.MainCode.GDBGObjects2= [];
+gdjs.MainCode.GDBGObjects3= [];
 
 
 gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDStarObjects2Objects = Hashtable.newFrom({"Star": gdjs.MainCode.GDStarObjects2});
@@ -313,11 +313,7 @@ let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
-gdjs.copyArray(runtimeScene.getObjects("NewVideo"), gdjs.MainCode.GDNewVideoObjects1);
 {gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "anti");
-}{for(var i = 0, len = gdjs.MainCode.GDNewVideoObjects1.length ;i < len;++i) {
-    gdjs.MainCode.GDNewVideoObjects1[i].play();
-}
 }}
 
 }
@@ -402,9 +398,9 @@ gdjs.MainCode.GDSettingsButtonObjects3.length = 0;
 gdjs.MainCode.GDIDtextObjects1.length = 0;
 gdjs.MainCode.GDIDtextObjects2.length = 0;
 gdjs.MainCode.GDIDtextObjects3.length = 0;
-gdjs.MainCode.GDNewVideoObjects1.length = 0;
-gdjs.MainCode.GDNewVideoObjects2.length = 0;
-gdjs.MainCode.GDNewVideoObjects3.length = 0;
+gdjs.MainCode.GDBGObjects1.length = 0;
+gdjs.MainCode.GDBGObjects2.length = 0;
+gdjs.MainCode.GDBGObjects3.length = 0;
 
 gdjs.MainCode.eventsList2(runtimeScene);
 gdjs.MainCode.GDStarObjects1.length = 0;
@@ -443,9 +439,9 @@ gdjs.MainCode.GDSettingsButtonObjects3.length = 0;
 gdjs.MainCode.GDIDtextObjects1.length = 0;
 gdjs.MainCode.GDIDtextObjects2.length = 0;
 gdjs.MainCode.GDIDtextObjects3.length = 0;
-gdjs.MainCode.GDNewVideoObjects1.length = 0;
-gdjs.MainCode.GDNewVideoObjects2.length = 0;
-gdjs.MainCode.GDNewVideoObjects3.length = 0;
+gdjs.MainCode.GDBGObjects1.length = 0;
+gdjs.MainCode.GDBGObjects2.length = 0;
+gdjs.MainCode.GDBGObjects3.length = 0;
 
 
 return;
