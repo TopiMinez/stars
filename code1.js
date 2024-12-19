@@ -177,6 +177,17 @@ isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Reward"
 if (isConditionTrue_0) {
 isConditionTrue_0 = false;
 isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Anti"));
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.MainCode.GDStarObjects2.length;i<l;++i) {
+    if ( gdjs.MainCode.GDStarObjects2[i].getVariableNumber(gdjs.MainCode.GDStarObjects2[i].getVariables().getFromIndex(0)) == 1 ) {
+        isConditionTrue_0 = true;
+        gdjs.MainCode.GDStarObjects2[k] = gdjs.MainCode.GDStarObjects2[i];
+        ++k;
+    }
+}
+gdjs.MainCode.GDStarObjects2.length = k;
+}
 }
 }
 }

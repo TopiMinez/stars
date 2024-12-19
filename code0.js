@@ -53,7 +53,7 @@ if (isConditionTrue_0) {
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "4", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(4).getChild(0));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "3", runtimeScene, runtimeScene.getScene().getVariables().getFromIndex(0));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "2", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(1));
-}{gdjs.evtTools.storage.readNumberFromJSONFile("a", "1", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0));
+}{gdjs.evtTools.storage.readNumberFromJSONFile("a", "0", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(0));
 }
 { //Subevents
 gdjs.LoadCode.eventsList0(runtimeScene);} //End of subevents
