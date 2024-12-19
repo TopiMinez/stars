@@ -8,7 +8,7 @@ if (typeof gdjs.evtsExt__GamePushAds__RewardedVideo !== "undefined") {
 gdjs.evtsExt__GamePushAds__RewardedVideo = {};
 
 
-gdjs.evtsExt__GamePushAds__RewardedVideo.userFunc0xd73b58 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
+gdjs.evtsExt__GamePushAds__RewardedVideo.userFunc0x97aba8 = function GDJSInlineCode(runtimeScene, eventsFunctionContext) {
 "use strict";
 eventsFunctionContext.returnValue = gdjs.__RewardedVideo.bull;
 };
@@ -17,7 +17,7 @@ gdjs.evtsExt__GamePushAds__RewardedVideo.eventsList0 = function(runtimeScene, ev
 {
 
 
-gdjs.evtsExt__GamePushAds__RewardedVideo.userFunc0xd73b58(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
+gdjs.evtsExt__GamePushAds__RewardedVideo.userFunc0x97aba8(runtimeScene, typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined);
 
 }
 

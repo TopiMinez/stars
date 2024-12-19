@@ -1,11 +1,5 @@
 gdjs.MainCode = {};
 gdjs.MainCode.localVariables = [];
-gdjs.MainCode.GDStarObjects1= [];
-gdjs.MainCode.GDStarObjects2= [];
-gdjs.MainCode.GDStarObjects3= [];
-gdjs.MainCode.GDNewTextObjects1= [];
-gdjs.MainCode.GDNewTextObjects2= [];
-gdjs.MainCode.GDNewTextObjects3= [];
 gdjs.MainCode.GDStarsEmitterObjects1= [];
 gdjs.MainCode.GDStarsEmitterObjects2= [];
 gdjs.MainCode.GDStarsEmitterObjects3= [];
@@ -39,15 +33,132 @@ gdjs.MainCode.GDIDtextObjects3= [];
 gdjs.MainCode.GDBGObjects1= [];
 gdjs.MainCode.GDBGObjects2= [];
 gdjs.MainCode.GDBGObjects3= [];
+gdjs.MainCode.GDStarObjects1= [];
+gdjs.MainCode.GDStarObjects2= [];
+gdjs.MainCode.GDStarObjects3= [];
+gdjs.MainCode.GDBalanceObjects1= [];
+gdjs.MainCode.GDBalanceObjects2= [];
+gdjs.MainCode.GDBalanceObjects3= [];
+gdjs.MainCode.GDBackButtonObjects1= [];
+gdjs.MainCode.GDBackButtonObjects2= [];
+gdjs.MainCode.GDBackButtonObjects3= [];
 
 
 gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDStarObjects2Objects = Hashtable.newFrom({"Star": gdjs.MainCode.GDStarObjects2});
 gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDStarsEmitterObjects2Objects = Hashtable.newFrom({"StarsEmitter": gdjs.MainCode.GDStarsEmitterObjects2});
+gdjs.MainCode.asyncCallback11486756 = function (runtimeScene, asyncObjectsList) {
+asyncObjectsList.restoreLocalVariablesContainers(gdjs.MainCode.localVariables);
+gdjs.copyArray(asyncObjectsList.getObjects("Star"), gdjs.MainCode.GDStarObjects3);
+
+{for(var i = 0, len = gdjs.MainCode.GDStarObjects3.length ;i < len;++i) {
+    gdjs.MainCode.GDStarObjects3[i].getBehavior("Resizable").setSize(500, 500);
+}
+}gdjs.MainCode.localVariables.length = 0;
+}
 gdjs.MainCode.eventsList0 = function(runtimeScene) {
 
 {
 
 
+{
+{
+const asyncObjectsList = new gdjs.LongLivedObjectsList();
+asyncObjectsList.backupLocalVariablesContainers(gdjs.MainCode.localVariables);
+for (const obj of gdjs.MainCode.GDStarObjects2) asyncObjectsList.addObject("Star", obj);
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.15), (runtimeScene) => (gdjs.MainCode.asyncCallback11486756(runtimeScene, asyncObjectsList)));
+}
+}
+
+}
+
+
+};gdjs.MainCode.eventsList1 = function(runtimeScene) {
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("ShopButton"), gdjs.MainCode.GDShopButtonObjects2);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.MainCode.GDShopButtonObjects2.length;i<l;++i) {
+    if ( gdjs.MainCode.GDShopButtonObjects2[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.MainCode.GDShopButtonObjects2[k] = gdjs.MainCode.GDShopButtonObjects2[i];
+        ++k;
+    }
+}
+gdjs.MainCode.GDShopButtonObjects2.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Reward"));
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Anti"));
+}
+}
+if (isConditionTrue_0) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Shop", false);
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("GameButton"), gdjs.MainCode.GDGameButtonObjects2);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.MainCode.GDGameButtonObjects2.length;i<l;++i) {
+    if ( gdjs.MainCode.GDGameButtonObjects2[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.MainCode.GDGameButtonObjects2[k] = gdjs.MainCode.GDGameButtonObjects2[i];
+        ++k;
+    }
+}
+gdjs.MainCode.GDGameButtonObjects2.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Reward"));
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Anti"));
+}
+}
+if (isConditionTrue_0) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "MiniGame", false);
+}{gdjs.evtTools.storage.clearJSONFile("a");
+}}
+
+}
+
+
+{
+
+gdjs.copyArray(runtimeScene.getObjects("SettingsButton"), gdjs.MainCode.GDSettingsButtonObjects2);
+
+let isConditionTrue_0 = false;
+isConditionTrue_0 = false;
+for (var i = 0, k = 0, l = gdjs.MainCode.GDSettingsButtonObjects2.length;i<l;++i) {
+    if ( gdjs.MainCode.GDSettingsButtonObjects2[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
+        isConditionTrue_0 = true;
+        gdjs.MainCode.GDSettingsButtonObjects2[k] = gdjs.MainCode.GDSettingsButtonObjects2[i];
+        ++k;
+    }
+}
+gdjs.MainCode.GDSettingsButtonObjects2.length = k;
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Reward"));
+if (isConditionTrue_0) {
+isConditionTrue_0 = false;
+isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Anti"));
+}
+}
+if (isConditionTrue_0) {
+{gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Settings", false);
+}{gdjs.evtTools.storage.clearJSONFile("a");
+}}
 
 }
 
@@ -72,13 +183,19 @@ isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Anti"))
 }
 }
 if (isConditionTrue_0) {
+/* Reuse gdjs.MainCode.GDStarObjects2 */
 gdjs.MainCode.GDStarsEmitterObjects2.length = 0;
 
 {gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDStarsEmitterObjects2Objects, gdjs.evtTools.input.getCursorX(runtimeScene, "", 0), gdjs.evtTools.input.getCursorY(runtimeScene, "", 0), "");
-}{runtimeScene.getGame().getVariables().getFromIndex(0).add(0.0001);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
-}{runtimeScene.getScene().getVariables().getFromIndex(0).add(1);
-}}
+}{runtimeScene.getGame().getVariables().getFromIndex(0).add(0.001);
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "1", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
+}{for(var i = 0, len = gdjs.MainCode.GDStarObjects2.length ;i < len;++i) {
+    gdjs.MainCode.GDStarObjects2[i].getBehavior("Resizable").setSize(490, 490);
+}
+}
+{ //Subevents
+gdjs.MainCode.eventsList0(runtimeScene);} //End of subevents
+}
 
 }
 
@@ -105,14 +222,10 @@ if (isConditionTrue_0) {
 
 let isConditionTrue_0 = false;
 {
-gdjs.copyArray(runtimeScene.getObjects("AntiClicker"), gdjs.MainCode.GDAntiClickerObjects1);
+gdjs.copyArray(runtimeScene.getObjects("Balance"), gdjs.MainCode.GDBalanceObjects1);
 gdjs.copyArray(runtimeScene.getObjects("BlueFlatBar"), gdjs.MainCode.GDBlueFlatBarObjects1);
-gdjs.copyArray(runtimeScene.getObjects("NewText"), gdjs.MainCode.GDNewTextObjects1);
-{for(var i = 0, len = gdjs.MainCode.GDNewTextObjects1.length ;i < len;++i) {
-    gdjs.MainCode.GDNewTextObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtTools.common.roundTo(runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), 4)));
-}
-}{for(var i = 0, len = gdjs.MainCode.GDAntiClickerObjects1.length ;i < len;++i) {
-    gdjs.MainCode.GDAntiClickerObjects1[i].getBehavior("Text").setText("Авто-кликер запрещен. Перезайдите");
+{for(var i = 0, len = gdjs.MainCode.GDBalanceObjects1.length ;i < len;++i) {
+    gdjs.MainCode.GDBalanceObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtTools.common.roundTo(runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), 3)));
 }
 }{for(var i = 0, len = gdjs.MainCode.GDBlueFlatBarObjects1.length ;i < len;++i) {
     gdjs.MainCode.GDBlueFlatBarObjects1[i].SetValue(runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
@@ -122,53 +235,7 @@ gdjs.copyArray(runtimeScene.getObjects("NewText"), gdjs.MainCode.GDNewTextObject
 }
 
 
-};gdjs.MainCode.eventsList1 = function(runtimeScene) {
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "anti") >= 1;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0)) <= 20;
-}
-if (isConditionTrue_0) {
-{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "anti");
-}{runtimeScene.getScene().getVariables().getFromIndex(0).setNumber(0);
-}}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSecondsOrNaN(runtimeScene, "anti") >= 1;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getScene().getVariables().getFromIndex(0)) >= 21;
-}
-if (isConditionTrue_0) {
-{runtimeScene.getScene().getVariables().getFromIndex(0).setNumber(0);
-}{gdjs.evtTools.camera.showLayer(runtimeScene, "Anti");
-}{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "anti");
-}}
-
-}
-
-
 };gdjs.MainCode.eventsList2 = function(runtimeScene) {
-
-{
-
-
-gdjs.MainCode.eventsList0(runtimeScene);
-}
-
 
 {
 
@@ -182,200 +249,13 @@ gdjs.MainCode.eventsList1(runtimeScene);
 
 let isConditionTrue_0 = false;
 isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1)) == 41982470;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) == 0;
-}
 if (isConditionTrue_0) {
 {runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(1);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "REWA12", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
-}{runtimeScene.getGame().getVariables().getFromIndex(0).setNumber(0);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
-}}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1)) == 50981512;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) == 0;
-}
-if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(1);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "REWA12", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
-}{runtimeScene.getGame().getVariables().getFromIndex(0).sub(13);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
-}}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1)) == 90840587;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) == 0;
-}
-if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(1);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "REWA12", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
-}{runtimeScene.getGame().getVariables().getFromIndex(0).sub(13);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
-}}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1)) == 11642313;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) == 0;
-}
-if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(1);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "REWA12", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
-}{runtimeScene.getGame().getVariables().getFromIndex(0).sub(13);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
-}}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1)) == 81908849;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) == 0;
-}
-if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(1);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "REWA12", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
-}{runtimeScene.getGame().getVariables().getFromIndex(0).sub(13);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
-}}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1)) == 20707436;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) == 0;
-}
-if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(1);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "REWA12", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
-}{runtimeScene.getGame().getVariables().getFromIndex(0).sub(13);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
-}}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1)) == 95616914;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) == 0;
-}
-if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(1);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "REWA12", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
-}{runtimeScene.getGame().getVariables().getFromIndex(0).sub(13);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
-}}
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(1)) == 69847210;
-if (isConditionTrue_0) {
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) == 0;
-}
-if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(1);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "REWA12", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
-}{runtimeScene.getGame().getVariables().getFromIndex(0).sub(13);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "Stars", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
-}}
-
-}
-
-
-{
-
-
-
-}
-
-
-{
-
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
-if (isConditionTrue_0) {
-{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "anti");
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("SettingsButton"), gdjs.MainCode.GDSettingsButtonObjects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-for (var i = 0, k = 0, l = gdjs.MainCode.GDSettingsButtonObjects1.length;i<l;++i) {
-    if ( gdjs.MainCode.GDSettingsButtonObjects1[i].getBehavior("ButtonFSM").IsClicked((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined)) ) {
-        isConditionTrue_0 = true;
-        gdjs.MainCode.GDSettingsButtonObjects1[k] = gdjs.MainCode.GDSettingsButtonObjects1[i];
-        ++k;
-    }
-}
-gdjs.MainCode.GDSettingsButtonObjects1.length = k;
-if (isConditionTrue_0) {
-/* Reuse gdjs.MainCode.GDSettingsButtonObjects1 */
-{for(var i = 0, len = gdjs.MainCode.GDSettingsButtonObjects1.length ;i < len;++i) {
-    gdjs.MainCode.GDSettingsButtonObjects1[i].deleteFromScene(runtimeScene);
-}
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "10", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
+}{runtimeScene.getGame().getVariables().getFromIndex(0).add(3);
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "1", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
+}{gdjs.evtTools.camera.showLayer(runtimeScene, "Reward");
 }}
 
 }
@@ -400,12 +280,6 @@ gdjs.copyArray(runtimeScene.getObjects("IDtext"), gdjs.MainCode.GDIDtextObjects1
 gdjs.MainCode.func = function(runtimeScene) {
 runtimeScene.getOnceTriggers().startNewFrame();
 
-gdjs.MainCode.GDStarObjects1.length = 0;
-gdjs.MainCode.GDStarObjects2.length = 0;
-gdjs.MainCode.GDStarObjects3.length = 0;
-gdjs.MainCode.GDNewTextObjects1.length = 0;
-gdjs.MainCode.GDNewTextObjects2.length = 0;
-gdjs.MainCode.GDNewTextObjects3.length = 0;
 gdjs.MainCode.GDStarsEmitterObjects1.length = 0;
 gdjs.MainCode.GDStarsEmitterObjects2.length = 0;
 gdjs.MainCode.GDStarsEmitterObjects3.length = 0;
@@ -439,14 +313,17 @@ gdjs.MainCode.GDIDtextObjects3.length = 0;
 gdjs.MainCode.GDBGObjects1.length = 0;
 gdjs.MainCode.GDBGObjects2.length = 0;
 gdjs.MainCode.GDBGObjects3.length = 0;
+gdjs.MainCode.GDStarObjects1.length = 0;
+gdjs.MainCode.GDStarObjects2.length = 0;
+gdjs.MainCode.GDStarObjects3.length = 0;
+gdjs.MainCode.GDBalanceObjects1.length = 0;
+gdjs.MainCode.GDBalanceObjects2.length = 0;
+gdjs.MainCode.GDBalanceObjects3.length = 0;
+gdjs.MainCode.GDBackButtonObjects1.length = 0;
+gdjs.MainCode.GDBackButtonObjects2.length = 0;
+gdjs.MainCode.GDBackButtonObjects3.length = 0;
 
 gdjs.MainCode.eventsList2(runtimeScene);
-gdjs.MainCode.GDStarObjects1.length = 0;
-gdjs.MainCode.GDStarObjects2.length = 0;
-gdjs.MainCode.GDStarObjects3.length = 0;
-gdjs.MainCode.GDNewTextObjects1.length = 0;
-gdjs.MainCode.GDNewTextObjects2.length = 0;
-gdjs.MainCode.GDNewTextObjects3.length = 0;
 gdjs.MainCode.GDStarsEmitterObjects1.length = 0;
 gdjs.MainCode.GDStarsEmitterObjects2.length = 0;
 gdjs.MainCode.GDStarsEmitterObjects3.length = 0;
@@ -480,6 +357,15 @@ gdjs.MainCode.GDIDtextObjects3.length = 0;
 gdjs.MainCode.GDBGObjects1.length = 0;
 gdjs.MainCode.GDBGObjects2.length = 0;
 gdjs.MainCode.GDBGObjects3.length = 0;
+gdjs.MainCode.GDStarObjects1.length = 0;
+gdjs.MainCode.GDStarObjects2.length = 0;
+gdjs.MainCode.GDStarObjects3.length = 0;
+gdjs.MainCode.GDBalanceObjects1.length = 0;
+gdjs.MainCode.GDBalanceObjects2.length = 0;
+gdjs.MainCode.GDBalanceObjects3.length = 0;
+gdjs.MainCode.GDBackButtonObjects1.length = 0;
+gdjs.MainCode.GDBackButtonObjects2.length = 0;
+gdjs.MainCode.GDBackButtonObjects3.length = 0;
 
 
 return;
