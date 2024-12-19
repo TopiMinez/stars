@@ -125,7 +125,7 @@ isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGam
 }
 if (isConditionTrue_0) {
 {runtimeScene.getGame().getVariables().getFromIndex(0).sub(45);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "1", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "0", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }{runtimeScene.getGame().getVariables().getFromIndex(4).getChild(0).setNumber(1);
 }{gdjs.evtTools.storage.writeNumberInJSONFile("a", "4", runtimeScene.getGame().getVariables().getFromIndex(4).getChild(0).getAsNumber());
 }}
@@ -223,7 +223,7 @@ isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGam
 }
 if (isConditionTrue_0) {
 {runtimeScene.getGame().getVariables().getFromIndex(0).sub(100);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "1", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "0", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }{runtimeScene.getGame().getVariables().getFromIndex(5).getChild(0).setNumber(1);
 }{gdjs.evtTools.storage.writeNumberInJSONFile("a", "5", runtimeScene.getGame().getVariables().getFromIndex(5).getChild(0).getAsNumber());
 }}
@@ -295,8 +295,7 @@ gdjs.ShopCode.eventsList1(runtimeScene);
 }
 
 
-};gdjs.ShopCode.mapOfGDgdjs_9546ShopCode_9546GDCandie100Objects1Objects = Hashtable.newFrom({"Candie100": gdjs.ShopCode.GDCandie100Objects1});
-gdjs.ShopCode.eventsList3 = function(runtimeScene) {
+};gdjs.ShopCode.eventsList3 = function(runtimeScene) {
 
 {
 
@@ -314,6 +313,7 @@ for (var i = 0, k = 0, l = gdjs.ShopCode.GDBackButtonObjects1.length;i<l;++i) {
 gdjs.ShopCode.GDBackButtonObjects1.length = k;
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Main", false);
+}{gdjs.evtsExt__GamePushAds__ShowFullscreen.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }
@@ -335,20 +335,6 @@ gdjs.copyArray(runtimeScene.getObjects("Balance"), gdjs.ShopCode.GDBalanceObject
 {for(var i = 0, len = gdjs.ShopCode.GDBalanceObjects1.length ;i < len;++i) {
     gdjs.ShopCode.GDBalanceObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtTools.common.roundTo(runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber(), 3)));
 }
-}}
-
-}
-
-
-{
-
-gdjs.copyArray(runtimeScene.getObjects("Candie100"), gdjs.ShopCode.GDCandie100Objects1);
-
-let isConditionTrue_0 = false;
-isConditionTrue_0 = false;
-isConditionTrue_0 = gdjs.evtTools.input.cursorOnObject(gdjs.ShopCode.mapOfGDgdjs_9546ShopCode_9546GDCandie100Objects1Objects, runtimeScene, true, false);
-if (isConditionTrue_0) {
-{runtimeScene.getGame().getVariables().getFromIndex(0).add(1);
 }}
 
 }

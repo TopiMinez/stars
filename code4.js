@@ -49,6 +49,7 @@ if (isConditionTrue_0) {
 }{gdjs.evtTools.runtimeScene.pauseTimer(runtimeScene, "spawn");
 }{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "time");
 }{gdjs.evtTools.runtimeScene.pauseTimer(runtimeScene, "time");
+}{gdjs.evtsExt__GamePushAds__ShowFullscreen.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }
@@ -105,7 +106,7 @@ let isConditionTrue_0 = false;
 gdjs.copyArray(runtimeScene.getObjects("Snowman"), gdjs.MiniGameCode.GDSnowmanObjects1);
 gdjs.copyArray(runtimeScene.getObjects("Time"), gdjs.MiniGameCode.GDTimeObjects1);
 {for(var i = 0, len = gdjs.MiniGameCode.GDSnowmanObjects1.length ;i < len;++i) {
-    gdjs.MiniGameCode.GDSnowmanObjects1[i].addForce(0, 30, 1);
+    gdjs.MiniGameCode.GDSnowmanObjects1[i].addForce(0, 50, 1);
 }
 }{for(var i = 0, len = gdjs.MiniGameCode.GDTimeObjects1.length ;i < len;++i) {
     gdjs.MiniGameCode.GDTimeObjects1[i].getBehavior("Text").setText(gdjs.evtTools.common.toString(gdjs.evtTools.common.roundTo(15 - gdjs.evtTools.runtimeScene.getTimerElapsedTimeInSeconds(runtimeScene, "time"), 0)));
@@ -132,6 +133,7 @@ if (isConditionTrue_0) {
     gdjs.MiniGameCode.GDSnowmanObjects1[i].deleteFromScene(runtimeScene);
 }
 }{runtimeScene.getGame().getVariables().getFromIndex(0).add(0.002);
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "0", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }}
 
 }

@@ -44,7 +44,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 {gdjs.evtsExt__GamePushAds__Initialization.func(runtimeScene, "17515", "AMI2KwNIiSv1kxFPMdl3N23bh2b1Yqt5", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtTools.storage.readNumberFromJSONFile("a", "10", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(5).getChild(2));
+}{gdjs.evtTools.storage.readNumberFromJSONFile("a", "10", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(2));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "9", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(5).getChild(2));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "8", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(4).getChild(2));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "7", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(5).getChild(1));

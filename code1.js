@@ -127,7 +127,6 @@ isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Anti"))
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "MiniGame", false);
-}{gdjs.evtTools.storage.clearJSONFile("a");
 }}
 
 }
@@ -157,7 +156,6 @@ isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Anti"))
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Settings", false);
-}{gdjs.evtTools.storage.clearJSONFile("a");
 }}
 
 }
@@ -188,7 +186,7 @@ gdjs.MainCode.GDStarsEmitterObjects2.length = 0;
 
 {gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDStarsEmitterObjects2Objects, gdjs.evtTools.input.getCursorX(runtimeScene, "", 0), gdjs.evtTools.input.getCursorY(runtimeScene, "", 0), "");
 }{runtimeScene.getGame().getVariables().getFromIndex(0).add(0.001);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "1", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "0", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }{for(var i = 0, len = gdjs.MainCode.GDStarObjects2.length ;i < len;++i) {
     gdjs.MainCode.GDStarObjects2[i].getBehavior("Resizable").setSize(490, 490);
 }
@@ -254,7 +252,7 @@ if (isConditionTrue_0) {
 {runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(1);
 }{gdjs.evtTools.storage.writeNumberInJSONFile("a", "10", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
 }{runtimeScene.getGame().getVariables().getFromIndex(0).add(3);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "1", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "0", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }{gdjs.evtTools.camera.showLayer(runtimeScene, "Reward");
 }}
 
