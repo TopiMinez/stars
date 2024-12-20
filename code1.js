@@ -46,7 +46,7 @@ gdjs.MainCode.GDBackButtonObjects3= [];
 
 gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDStarObjects2Objects = Hashtable.newFrom({"Star": gdjs.MainCode.GDStarObjects2});
 gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDStarsEmitterObjects2Objects = Hashtable.newFrom({"StarsEmitter": gdjs.MainCode.GDStarsEmitterObjects2});
-gdjs.MainCode.asyncCallback11486756 = function (runtimeScene, asyncObjectsList) {
+gdjs.MainCode.asyncCallback12405628 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.MainCode.localVariables);
 gdjs.copyArray(asyncObjectsList.getObjects("Star"), gdjs.MainCode.GDStarObjects3);
 
@@ -65,7 +65,7 @@ gdjs.MainCode.eventsList0 = function(runtimeScene) {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.MainCode.localVariables);
 for (const obj of gdjs.MainCode.GDStarObjects2) asyncObjectsList.addObject("Star", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.15), (runtimeScene) => (gdjs.MainCode.asyncCallback11486756(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.15), (runtimeScene) => (gdjs.MainCode.asyncCallback12405628(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -261,8 +261,8 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.variable.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(2)) == 0;
 if (isConditionTrue_0) {
 {runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(1);
-}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "10", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
-}{runtimeScene.getGame().getVariables().getFromIndex(0).add(3);
+}{gdjs.evtTools.storage.writeNumberInJSONFile("a", "25", runtimeScene.getGame().getVariables().getFromIndex(2).getAsNumber());
+}{runtimeScene.getGame().getVariables().getFromIndex(0).add(20);
 }{gdjs.evtTools.storage.writeNumberInJSONFile("a", "0", runtimeScene.getGame().getVariables().getFromIndex(0).getAsNumber());
 }{gdjs.evtTools.camera.showLayer(runtimeScene, "Reward");
 }}

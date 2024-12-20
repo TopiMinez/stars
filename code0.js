@@ -12,7 +12,7 @@ gdjs.LoadCode.GDBackButtonObjects1= [];
 gdjs.LoadCode.GDBackButtonObjects2= [];
 
 
-gdjs.LoadCode.asyncCallback12220596 = function (runtimeScene, asyncObjectsList) {
+gdjs.LoadCode.asyncCallback12388556 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.LoadCode.localVariables);
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Main", false);
 }{gdjs.evtsExt__GamePushAds__ShowFullscreen.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
@@ -27,7 +27,7 @@ gdjs.LoadCode.eventsList0 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.LoadCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(2), (runtimeScene) => (gdjs.LoadCode.asyncCallback12220596(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(2), (runtimeScene) => (gdjs.LoadCode.asyncCallback12388556(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -44,7 +44,7 @@ isConditionTrue_0 = false;
 isConditionTrue_0 = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 if (isConditionTrue_0) {
 {gdjs.evtsExt__GamePushAds__Initialization.func(runtimeScene, "17515", "AMI2KwNIiSv1kxFPMdl3N23bh2b1Yqt5", (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
-}{gdjs.evtTools.storage.readNumberFromJSONFile("a", "10", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(2));
+}{gdjs.evtTools.storage.readNumberFromJSONFile("a", "25", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(2));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "9", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(5).getChild(2));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "8", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(4).getChild(2));
 }{gdjs.evtTools.storage.readNumberFromJSONFile("a", "7", runtimeScene, runtimeScene.getGame().getVariables().getFromIndex(5).getChild(1));
