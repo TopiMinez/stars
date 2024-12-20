@@ -46,7 +46,7 @@ gdjs.MainCode.GDBackButtonObjects3= [];
 
 gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDStarObjects2Objects = Hashtable.newFrom({"Star": gdjs.MainCode.GDStarObjects2});
 gdjs.MainCode.mapOfGDgdjs_9546MainCode_9546GDStarsEmitterObjects2Objects = Hashtable.newFrom({"StarsEmitter": gdjs.MainCode.GDStarsEmitterObjects2});
-gdjs.MainCode.asyncCallback12405628 = function (runtimeScene, asyncObjectsList) {
+gdjs.MainCode.asyncCallback12406188 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.MainCode.localVariables);
 gdjs.copyArray(asyncObjectsList.getObjects("Star"), gdjs.MainCode.GDStarObjects3);
 
@@ -65,7 +65,7 @@ gdjs.MainCode.eventsList0 = function(runtimeScene) {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.MainCode.localVariables);
 for (const obj of gdjs.MainCode.GDStarObjects2) asyncObjectsList.addObject("Star", obj);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.15), (runtimeScene) => (gdjs.MainCode.asyncCallback12405628(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(0.15), (runtimeScene) => (gdjs.MainCode.asyncCallback12406188(runtimeScene, asyncObjectsList)));
 }
 }
 
@@ -98,6 +98,7 @@ isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Anti"))
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Shop", false);
+}{gdjs.evtsExt__GamePushAds__ShowFullscreen.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }
@@ -127,6 +128,7 @@ isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Anti"))
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "MiniGame", false);
+}{gdjs.evtsExt__GamePushAds__ShowFullscreen.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }
@@ -156,6 +158,7 @@ isConditionTrue_0 = !(gdjs.evtTools.camera.layerIsVisible(runtimeScene, "Anti"))
 }
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Settings", false);
+}{gdjs.evtsExt__GamePushAds__ShowFullscreen.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }

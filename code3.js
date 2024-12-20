@@ -30,6 +30,7 @@ for (var i = 0, k = 0, l = gdjs.SettingsCode.GDBackButtonObjects1.length;i<l;++i
 gdjs.SettingsCode.GDBackButtonObjects1.length = k;
 if (isConditionTrue_0) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Main", false);
+}{gdjs.evtsExt__GamePushAds__ShowFullscreen.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }

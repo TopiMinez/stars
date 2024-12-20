@@ -49,7 +49,6 @@ if (isConditionTrue_0) {
 }{gdjs.evtTools.runtimeScene.pauseTimer(runtimeScene, "spawn");
 }{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "time");
 }{gdjs.evtTools.runtimeScene.pauseTimer(runtimeScene, "time");
-}{gdjs.evtsExt__GamePushAds__ShowFullscreen.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
 }}
 
 }

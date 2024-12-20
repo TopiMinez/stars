@@ -12,7 +12,7 @@ gdjs.LoadCode.GDBackButtonObjects1= [];
 gdjs.LoadCode.GDBackButtonObjects2= [];
 
 
-gdjs.LoadCode.asyncCallback12388556 = function (runtimeScene, asyncObjectsList) {
+gdjs.LoadCode.asyncCallback12389116 = function (runtimeScene, asyncObjectsList) {
 asyncObjectsList.restoreLocalVariablesContainers(gdjs.LoadCode.localVariables);
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Main", false);
 }{gdjs.evtsExt__GamePushAds__ShowFullscreen.func(runtimeScene, (typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : undefined));
@@ -27,7 +27,7 @@ gdjs.LoadCode.eventsList0 = function(runtimeScene) {
 {
 const asyncObjectsList = new gdjs.LongLivedObjectsList();
 asyncObjectsList.backupLocalVariablesContainers(gdjs.LoadCode.localVariables);
-runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(2), (runtimeScene) => (gdjs.LoadCode.asyncCallback12388556(runtimeScene, asyncObjectsList)));
+runtimeScene.getAsyncTasksManager().addTask(gdjs.evtTools.runtimeScene.wait(2), (runtimeScene) => (gdjs.LoadCode.asyncCallback12389116(runtimeScene, asyncObjectsList)));
 }
 }
 
